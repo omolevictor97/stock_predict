@@ -6,30 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    <style>
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: boredr-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover{
+            background-color: #45a049;
+        }
+        div {
+            border-radius:5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
 <body bgcolor="#d4a3ae">
     <center>
         <h1>
             Stock Price Prediction 
         </h1>
+    <div>
         <form method="POST", action="/predict">
             <b>Benefits Per Order</b>
-            <input type="text" name="a"/> <br>
+            <input type="text" name="a" placeholder="Earnings Per Order Placed"/> <br>
 
             <b>Sales per customer </b>
-            <input type="text" name="b"/> <br>
+            <input type="text" name="b" placeholder="Total sales per customer made per customer"/> <br>
 
             <b>Category Id</b>
-            <input type="text" name="c"/> <br>
+            <input type="text" name="c" placeholder="Product category code"/> <br>
 
             <b>Order Item Discount</b>
-            <input type="text" name="d"/> <br>
+            <input type="text" name="d" placeholder="Order item discount value"/> <br>
 
             <b>Order Item Quantity</b>
-            <input type="text" name="e"/> <br>
+            <input type="text" name="e" placeholder="Number of products per order"/> <br>
 
 
             <input type="submit" value="predict"/>
         </form>
+    </div>
     </center>
 </body>
 </html>
